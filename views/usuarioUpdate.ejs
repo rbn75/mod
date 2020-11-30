@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud de Prueba</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/update/<%= usuario._id %>" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="username" placeholder="Nombre de usuario" class="form-control" value="<%= usuario.username %>">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="email" placeholder="email" class="form-control" value="<%= usuario.email %>">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="password" placeholder="contrasena" class="form-control" value="<%= usuario.password %>">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

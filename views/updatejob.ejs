@@ -1,0 +1,30 @@
+<head>
+    <%- include('partials/_header.ejs') %>
+</head>
+<div class="container add-job-wrapper">
+    <br>
+    <h2>UPDATE JOBS IN HERE</h2>
+
+    <div class="form-wrapper">
+        <div class="form-hero">
+            <form action="/addjob" method="POST">
+                <div class="form-group">
+                    <label for="description">Job Description</label>
+                    <input type="text" name="description" class="form-control" placeholder="job description" value="<%= job.description %>">
+                </div>
+                <div class="form-group">
+                    <label for="location">location</label>
+                    <input type="text" name="location" class="form-control" placeholder="location" value="<%= job.location %>">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" name="pay" id="exampleFormControlSelect1">
+                      <option>guest</option>
+                      <option>employer</option>
+                    </select>
+                  </div>
+                <input type="submit" value="Add" class="btn btn-primary btn-lg">
+            </form>
+        </div>
+    </div>
+</div>
